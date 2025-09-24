@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long/Short Capital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .prose-custom p {
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+            text-align: justify;
+        }
+        .gradient-bg {
+            background-image: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .card-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-item:hover .card-icon {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-slate-900 tracking-tight">
+                Long/Short Capital
+            </a>
+            <nav class="space-x-8 hidden md:flex">
+                <a href="#about" class="text-gray-600 hover:text-slate-900 transition-colors duration-300 font-medium">About</a>
+                <a href="#cabinet" class="text-gray-600 hover:text-slate-900 transition-colors duration-300 font-medium">Cabinet</a>
+                <a href="#services" class="text-gray-600 hover:text-slate-900 transition-colors duration-300 font-medium">Services</a>
+                <a href="#contact" class="text-gray-600 hover:text-slate-900 transition-colors duration-300 font-medium">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-8">
+            <a href="#about" class="text-white text-3xl font-bold hover:text-gray-300 transition-colors duration-300">About</a>
+            <a href="#cabinet" class="text-white text-3xl font-bold hover:text-gray-300 transition-colors duration-300">Cabinet</a>
+            <a href="#services" class="text-white text-3xl font-bold hover:text-gray-300 transition-colors duration-300">Services</a>
+            <a href="#contact" class="text-white text-3xl font-bold hover:text-gray-300 transition-colors duration-300">Contact</a>
+            <button id="close-menu-button" class="absolute top-4 right-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white py-24 md:py-48">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+                    Long/Short Capital
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                    A financial and strategy consulting initiative dedicated to unlocking value and driving growth.
+                </p>
+                <div class="mt-12 flex justify-center space-x-6">
+                    <a href="#services" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg transform hover:scale-105">
+                        Our Services
+                    </a>
+                    <a href="#contact" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg transform hover:scale-105">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">About Us</h2>
+                <div class="text-gray-600 prose-custom">
+                    <p>
+                        Long/Short Capital is a boutique financial and strategy consulting initiative founded to address the unique challenges and opportunities in today's dynamic market. Our name reflects our core philosophy: we analyze both the "long" (growth and opportunities) and the "short" (risks and inefficiencies) aspects of a business to provide a balanced, holistic perspective. We specialize in working with ambitious startups, established small-to-medium enterprises, and individual investors seeking to navigate complex financial landscapes and refine their business strategies.
+                    </p>
+                    <p>
+                        Our mission is to empower our clients with actionable insights and data-driven strategies that lead to sustainable growth and competitive advantage. We believe that regardless of scale, a clear vision and a robust plan are the keys to success. Our approach is collaborative and tailored; we work alongside our clients to understand their unique goals, challenges, and market position, providing bespoke solutions instead of one-size-fits-all advice.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cabinet Section -->
+        <section id="cabinet" class="py-16 md:py-24 bg-slate-100">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">The Cabinet</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Founder -->
+                    <div class="card-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">N B Mothi Krishna</h3>
+                        <p class="text-teal-500 font-medium text-sm">Founder</p>
+                    </div>
+                    <!-- Other members -->
+                    <div class="card-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Aarav Sharma</h3>
+                        <p class="text-teal-500 font-medium text-sm">Head of Financial Strategy</p>
+                    </div>
+                    <div class="card-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Priya Patel</h3>
+                        <p class="text-teal-500 font-medium text-sm">Director of Business Development</p>
+                    </div>
+                    <div class="card-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Rohan Singh</h3>
+                        <p class="text-teal-500 font-medium text-sm">Senior Consultant</p>
+                    </div>
+                    <div class="card-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Ananya Gupta</h3>
+                        <p class="text-teal-500 font-medium text-sm">Head of Research</p>
+                    </div>
+                    <div class="card-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Kunal Mehta</h3>
+                        <p class="text-teal-500 font-medium text-sm">Director of Operations</p>
+                    </div>
+                    <div class="card-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Neha Kumari</h3>
+                        <p class="text-teal-500 font-medium text-sm">Principal Consultant</p>
+                    </div>
+                    <div class="card-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Siddharth Reddy</h3>
+                        <p class="text-teal-500 font-medium text-sm">Senior Financial Analyst</p>
+                    </div>
+                    <div class="card-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center">
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Divya Das</h3>
+                        <p class="text-teal-500 font-medium text-sm">Head of Strategic Planning</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">Our Services</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1: Financial Strategy -->
+                    <div class="card-item bg-slate-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-teal-500 mb-4 flex justify-center">
+                            <svg class="card-icon h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0v-6a2 2 0 012-2h2a2 2 0 012 2v6m-3 2h2a2 2 0 002-2v-6a2 2 0 00-2-2h-2a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 text-center mb-2">Financial Strategy</h3>
+                        <p class="text-gray-600 text-sm text-center">
+                            We help you create a robust financial roadmap, including budget forecasting, capital allocation, and investment planning to secure your future.
+                        </p>
+                    </div>
+                    <!-- Service 2: Business Strategy & Growth -->
+                    <div class="card-item bg-slate-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-teal-500 mb-4 flex justify-center">
+                            <svg class="card-icon h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 text-center mb-2">Business Strategy & Growth</h3>
+                        <p class="text-gray-600 text-sm text-center">
+                            From market entry to competitive analysis, we craft strategies to help your business scale effectively and dominate its niche.
+                        </p>
+                    </div>
+                    <!-- Service 3: Risk Management -->
+                    <div class="card-item bg-slate-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-teal-500 mb-4 flex justify-center">
+                            <svg class="card-icon h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 text-center mb-2">Risk Management</h3>
+                        <p class="text-gray-600 text-sm text-center">
+                            We identify and mitigate potential threats to your financial stability, ensuring your business is resilient in the face of uncertainty.
+                        </p>
+                    </div>
+                    <!-- Service 4: Financial Modeling -->
+                    <div class="card-item bg-slate-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-teal-500 mb-4 flex justify-center">
+                            <svg class="card-icon h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v16a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 text-center mb-2">Financial Modeling</h3>
+                        <p class="text-gray-600 text-sm text-center">
+                            Develop detailed financial models for valuation, forecasting, and scenario analysis to support strategic decision-making.
+                        </p>
+                    </div>
+                    <!-- Service 5: Market Research -->
+                    <div class="card-item bg-slate-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-teal-500 mb-4 flex justify-center">
+                            <svg class="card-icon h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 text-center mb-2">Market Research</h3>
+                        <p class="text-gray-600 text-sm text-center">
+                            Gain a competitive edge with in-depth market research and industry analysis to identify trends and opportunities.
+                        </p>
+                    </div>
+                    <!-- Service 6: Performance Optimization -->
+                    <div class="card-item bg-slate-100 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-teal-500 mb-4 flex justify-center">
+                            <svg class="card-icon h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 text-center mb-2">Performance Optimization</h3>
+                        <p class="text-gray-600 text-sm text-center">
+                            Streamline your operations and financial processes to improve efficiency and maximize profitability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-2xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Contact Us</h2>
+                <p class="text-gray-600 text-lg mb-6">
+                    Ready to take the next step? We’re here to help. Reach out to us to schedule a consultation.
+                </p>
+                <div class="flex flex-col items-center space-y-4">
+                    <a href="mailto:longshortcapital7@gmail.com" class="text-teal-500 hover:text-teal-600 underline text-lg font-medium transition-colors duration-300">
+                        longshortcapital7@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center text-sm text-gray-400">
+            <p>&copy; 2025 Long/Short Capital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu-button');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Hide mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
